@@ -9,15 +9,26 @@
 		function validateform() {
 
 			var x = document.forms['catform']['age'].value;
+			var y = document.forms['catform']['timer'].value;
 
 			if (x < 18) {
 				alert("Must be over the age of 18")
 				return false;
 				}
+				
 			if (isNaN(x)){
 				alert("Age must be a numeric value!")
 				return false;
 				}
+			if (y < 0 || y > 10) {
+				alert("Timer must be between 0 and 10")
+				return false;
+				}
+				
+			if (isNaN(y)){
+				alert("Timer must be a numeric value!")
+				return false;
+				}				
 			return true;
 			}
     </script>
@@ -31,6 +42,7 @@
             <a href="gallery.php">Cat Gallery</a>
             <a href="form.php">Form</a>
             <a href="about.php">About</a>
+            <a href="script.php">Script</a>
            </div>
     </body>
  
@@ -59,7 +71,9 @@
                 </script>
         Which kind of cat do you prefer?:<br>
         <input type="radio" name="catkind" value="with hair">with hair<br>
-        <input type="radio" name="catkind" value="no hair">no hair<br>
+        <input type="radio" name="catkind" value="no hair">no hair<br><br>
+        Led timer (Must be between 0 and 10 seconds):<br>
+        <input type="text" name="timer" required><br><br>
         <input type="submit" value="submit">
     </form>
 

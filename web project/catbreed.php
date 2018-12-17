@@ -14,6 +14,7 @@
          <a href="gallery.php">Cat Gallery</a>
          <a href="form.php">Form</a>
          <a href="about.php">About</a>
+         <a href="script.php">Script</a>
     </div>
     <H1 class="header">Bengal</H1>
 
